@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="demo.dao.UserMapper" >
+
+  <select id="selectUsersMapper" resultType="demo.dao.User">
+      SELECT u.user_id AS id,u.user_code AS password,u.user_name AS userName FROM epms_user u limit 0,30
+  </select>
+
+
+</mapper>
