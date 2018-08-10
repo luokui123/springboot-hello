@@ -3,7 +3,7 @@
 <mapper namespace="demo.dao.UserMapper" >
 
   <select id="selectUsersMapper" resultType="demo.dao.User">
-      SELECT u.user_id AS id,u.user_code AS password,u.user_name AS userName FROM epms_user u limit 0,30
+      SELECT u.user_id AS id,u.appid AS password,u.user_name AS userName FROM t_user u limit 0,30
   </select>
 
 
