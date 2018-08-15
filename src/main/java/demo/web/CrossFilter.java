@@ -33,7 +33,8 @@ public class CrossFilter implements Filter  {
 	public void doFilter(ServletRequest req, ServletResponse resp,FilterChain chain)
 			throws IOException, ServletException {
 		//解决跨域问题
-		logger.info("doFilter========");
+		HttpServletRequest request = (HttpServletRequest)req;
+		logger.info("url:{}",request.getRequestURL());
 		/*HttpServletRequest request = (HttpServletRequest)req;
 		HttpServletResponse response = (HttpServletResponse) resp;
 		StringBuffer url1 = request.getRequestURL();  

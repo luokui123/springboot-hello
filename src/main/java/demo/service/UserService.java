@@ -37,14 +37,14 @@ public class  UserService {
 	}
 
     private List<User> queryUser() {
-        String sql = "SELECT u.user_id,u.user_name,u.appid FROM t_user u LIMIT 100,10";
+        String sql = "SELECT u.user_id,u.user_name,u.OPENID FROM t_user u";
         List<User> indexes = jdbcTemplate.query(sql, new RowMapper<User>(){
 			@Override
 			public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 				User index=new User();
 				index.setId(rs.getLong("user_id"));
 				index.setUserName(rs.getString("user_name"));
-				index.setPassword(rs.getString("appid"));
+				index.setPassword(rs.getString("openid"));
 				return index;
 			}
 			
